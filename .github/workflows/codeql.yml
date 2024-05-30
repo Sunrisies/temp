@@ -12,16 +12,16 @@ jobs:
   check-commit-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Check init.sh file exists  
-        run: |  
-          ls -l  
-      - name: Add execute permission to init script  
-        run:  chmod +x ./scripts/init.sh 
-           
       - name: Checkout code
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # 获取所有提交记录以便检查提交信息
+      - name: Check init.sh file exists
+        run: |
+          ls -l
+      - name: Add execute permission to init script
+        run: chmod +x ./scripts/init.sh
+
       - name: Check commit messages in PR
         run: ./scripts/init.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
   analyze:
