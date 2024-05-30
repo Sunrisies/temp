@@ -5,6 +5,7 @@ on:
     branches: ['main']
   pull_request:
     branches: ['main']
+    types: [opened, synchronize, reopened] 
   schedule:
     - cron: '37 16 * * 6'
 
@@ -22,8 +23,16 @@ jobs:
       - name: Add execute permission to init script
         run: chmod +x ./scripts/init.sh
 
+      - name: 测试
+        run: echo ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
       - name: Check commit messages in PR
-        run: ./scripts/init.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+        run: |
+          FIRST_COMMIT=$(git rev-list --max-parents=0 HEAD)
+          echo "First commit hash: $FIRST_COMMIT"
+          LAST_COMMIT=$(git rev-parse HEAD)
+          LAST_COMMIT=$(git rev-parse HEAD)
+          echo "Last commit hash: $LAST_COMMIT"
+          sh ./scripts/init.sh $FIRST_COMMIT $LAST_COMMIT
   analyze:
     name: Analyze (${{ matrix.language }})
     # Runner size impacts CodeQL analysis time. To learn more, please see:
