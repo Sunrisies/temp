@@ -24,7 +24,7 @@ jobs:
           echo "Last commit hash: $LAST_COMMIT"
       - name: List commits in PR  
         run: |
-          LAST_COMMIT=$(git rev-parse HEAD)
+          # LAST_COMMIT=$(git rev-parse HEAD)
           echo "Last commit hash: $LAST_COMMIT"
           git rev-list "$FIRST_COMMIT..$LAST_COMMIT"  
   
