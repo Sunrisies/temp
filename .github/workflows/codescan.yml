@@ -14,6 +14,7 @@ jobs:
         with:  
           # 这会检出 pull request 的 head 分支，并允许我们运行 git rev-list  
           ref: ${{ github.event.pull_request.head.ref }}  
+          echo: "Pull Request: ${{ github.event }}"  
           fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
   
       - name: List commits in PR  
