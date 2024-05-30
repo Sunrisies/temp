@@ -12,22 +12,22 @@ jobs:
       - name: 测试
         run: echo "hello test"
         run: echo "${{ github.event_name }}"
-      - name: Checkout repository  
-        uses: actions/checkout@v2  
-        with:  
-          fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
+      # - name: Checkout repository  
+      #   uses: actions/checkout@v2  
+      #   with:  
+      #     fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
 
-      - name: List commits in PR  
-        run: |  
-          # 输出 PR 的标题和描述  
-          ${{ github.event.pull_request.head }}  
-          # 输出 base 分支的名称和 SHA 值  
-          ${{ github.event.pull_request.base }}  
-          # 使用 GitHub 提供的环境变量来获取 SHA 值  
-          start_sha=${{ github.event.pull_request.base.sha }}  
-          end_sha=${{ github.event.pull_request.head.sha }}  
+      # - name: List commits in PR  
+      #   run: |  
+      #     # 输出 PR 的标题和描述  
+      #     ${{ github.event.pull_request.head }}  
+      #     # 输出 base 分支的名称和 SHA 值  
+      #     ${{ github.event.pull_request.base }}  
+      #     # 使用 GitHub 提供的环境变量来获取 SHA 值  
+      #     start_sha=${{ github.event.pull_request.base.sha }}  
+      #     end_sha=${{ github.event.pull_request.head.sha }}  
   
-          # 运行 git rev-list 命令  
-          git rev-list "$start_sha..$end_sha"  
+      #     # 运行 git rev-list 命令  
+      #     git rev-list "$start_sha..$end_sha"  
   
       # 如果你还想进一步处理这个列表（比如输出数量或格式化），可以在这里添加额外的步骤
