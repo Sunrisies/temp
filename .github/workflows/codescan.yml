@@ -14,7 +14,7 @@ jobs:
         with:  
           fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
       - name: 测试
-        run: echo "${{ github.event_name }}"
+        run: echo "${{ github.event }}"
       # - name: List commits in PR  
       #   run: |  
       #     # 输出 PR 的标题和描述  
