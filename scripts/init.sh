@@ -8,7 +8,6 @@ end_sha=$2
 RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
-
 # 定义提交信息规范函数
 check_commit_message() {
     commit_msg="$1"
@@ -22,6 +21,7 @@ check_commit_message() {
 # 遍历从start_sha到end_sha的所有提交
 for sha in $(git rev-list $start_sha..$end_sha); do
     commit_msg=$(git show --format=%B -s $sha)
+    echo "$commit_msg"
     check_commit_message "$commit_msg"
 done
 

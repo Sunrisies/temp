@@ -22,6 +22,8 @@ jobs:
       - name: Add execute permission to init script
         run: chmod +x ./scripts/init.sh
 
+      - name: 测试
+        run: echo ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
       - name: Check commit messages in PR
         run: ./scripts/init.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
   analyze:
