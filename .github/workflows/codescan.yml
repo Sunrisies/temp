@@ -1,49 +1,26 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow requires that you have an existing account with codescan.io
-# For more information about configuring your workflow,
-# read our documentation at https://github.com/codescan-io/codescan-scanner-action
-name: CodeScan
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "main" ]
-  schedule:
-    - cron: '36 6 * * 6'
-
-permissions:
-  contents: read
-
-jobs:
-    CodeScan:
-        permissions:
-          contents: read # for actions/checkout to fetch code
-          security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
-          actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
-        runs-on: ubuntu-latest
-        steps:
-            -   name: Checkout repository
-                uses: actions/checkout@v4
-            -   name: Cache files
-                uses: actions/cache@v3
-                with:
-                    path: |
-                        ~/.sonar
-                    key: ${{ runner.os }}-sonar
-                    restore-keys: ${{ runner.os }}-sonar
-            -   name: Run Analysis
-                uses: codescan-io/codescan-scanner-action@5b2e8c5683ef6a5adc8fa3b7950bb07debccce12
-                with:
-                    login: ${{ secrets.CODESCAN_AUTH_TOKEN }}
-                    organization: ${{ secrets.CODESCAN_ORGANIZATION_KEY }}
-                    projectKey: ${{ secrets.CODESCAN_PROJECT_KEY }}
-            -   name: Upload SARIF file
-                uses: github/codeql-action/upload-sarif@v2
-                with:
-                    sarif_file: codescan.sarif
+name: List Commits in PR  
+on:  
+  pull_request:  
+    types: [opened, synchronize, reopened]  
+  
+jobs:  
+  list-commits:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout repository  
+        uses: actions/checkout@v2  
+        with:  
+          # 这会检出 pull request 的 head 分支，并允许我们运行 git rev-list  
+          ref: ${{ github.event.pull_request.head.ref }}  
+          fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
+  
+      - name: List commits in PR  
+        run: |  
+          # 使用 GitHub 提供的环境变量来获取 SHA 值  
+          start_sha=${{ github.event.pull_request.base.sha }}  
+          end_sha=${{ github.event.pull_request.head.sha }}  
+  
+          # 运行 git rev-list 命令  
+          git rev-list "$start_sha..$end_sha"  
+  
+      # 如果你还想进一步处理这个列表（比如输出数量或格式化），可以在这里添加额外的步骤
