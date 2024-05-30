@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v2  
         with:  
           # 这会检出 pull request 的 head 分支，并允许我们运行 git rev-list  
-          ref: ${{ github.event.push.head.ref }}  
+          ref: ${{ github.event.pull_request.head.ref }}  
           fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
   
       - name: List commits in PR  
         run: |  
           # 使用 GitHub 提供的环境变量来获取 SHA 值  
-          start_sha=${{ github.event.push.base.sha }}  
-          end_sha=${{ github.event.push.head.sha }}  
+          start_sha=${{ github.event.pull_request.base.sha }}  
+          end_sha=${{ github.event.pull_request.head.sha }}  
   
           # 运行 git rev-list 命令  
           git rev-list "$start_sha..$end_sha"  
