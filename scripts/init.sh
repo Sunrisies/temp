@@ -12,8 +12,8 @@ NC='\033[0m' # No Color
 check_commit_message() {
     commit_msg="$1"
     # 检查提交信息是否以指定的前缀开头
-    if ! echo "$commit_msg" | grep -qE "^(feat|fix|docs|style|refactor|test|chore|ci):"; then
-        echo -e "${RED}Error:${NC} Commit message format is incorrect. It should start with one of '${BLUE}feat|fix|docs|style|refactor|test|chore|ci:${NC}'." >&2
+    if ! echo "$commit_msg" | grep -qE "^(feat|fix|docs|style|refactor|test|chore|ci|特性|修复|文档|格式|重构|性能|测试|构建|集成|回退|其他):"; then
+        echo -e "${RED}Error:${NC} Commit message format is incorrect. It should start with one of '${BLUE}feat|fix|docs|style|refactor|test|chore|ci特性|修复|文档|格式|重构|性能|测试|构建|集成|回退|其他:${NC}'." >&2
         exit 1
     fi
 }

@@ -113,7 +113,7 @@ module.exports = {
       //   name: "revert:   ⏪️  Reverts a previous commit",
       //   emoji: "⏪️",
       // },
-      // 中文版
+      // 中文版 
       { value: "特性", name: "特性:   🚀  新增功能", emoji: "🚀" },
       { value: "修复", name: "修复:   🧩  修复缺陷", emoji: "🧩" },
       { value: "文档", name: "文档:   📚  文档变更", emoji: "📚" },
