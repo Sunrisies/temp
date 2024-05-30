@@ -15,16 +15,17 @@ jobs:
           fetch-depth: 0 # 设置为 0 以获取完整的提交历史  
       - name: Get the first (oldest) commit hash
         run: |
-          FIRST_COMMIT=$(git rev-list --max-parents=0 HEAD)
-          echo "First commit hash: $FIRST_COMMIT"
-
+          
       - name: Get the last (most recent) commit hash
         run: |
           LAST_COMMIT=$(git rev-parse HEAD)
           echo "Last commit hash: $LAST_COMMIT"
       - name: List commits in PR  
         run: |
-          # LAST_COMMIT=$(git rev-parse HEAD)
+          FIRST_COMMIT=$(git rev-list --max-parents=0 HEAD)
+          echo "First commit hash: $FIRST_COMMIT"
+          LAST_COMMIT=$(git rev-parse HEAD)
+          LAST_COMMIT=$(git rev-parse HEAD)
           echo "Last commit hash: $LAST_COMMIT"
           git rev-list "$FIRST_COMMIT..$LAST_COMMIT"  
   
