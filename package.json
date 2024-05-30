@@ -13,10 +13,12 @@
   "devDependencies": {
     "cz-git": "^1.9.2"
   },
-
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-git"
     }
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.2.2"
   }
 }
