@@ -74,7 +74,7 @@ jobs:
         echo '  make release'
         exit 1
     - name: 测试
-      run: ./scripts/init.sh 
+      run: ./scripts/init.sh ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
         
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
