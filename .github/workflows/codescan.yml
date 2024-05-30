@@ -2,7 +2,6 @@ name: List Commits in PR
 on:  
   push:
     branches: ['main']
-    types: [opened, synchronize, reopened]  
   pull_request:  
     types: [opened, synchronize, reopened]  
   
