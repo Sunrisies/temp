@@ -12,6 +12,9 @@ jobs:
   check-commit-message:
     runs-on: ubuntu-latest
     steps:
+      - name: Check init.sh file exists  
+        run: |  
+          ls -l  
       - name: Add execute permission to init script  
         run:  chmod +x ./scripts/init.sh 
            
