@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Infinite Scroll Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background: #1e293b;
+        color: #f8fafc;
+      }
+
+      .app {
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        text-align: center;
+      }
+      header h1 {
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      @media (min-width: 768px) {
+        header h1 {
+          font-size: 3rem;
+        }
+      }
+      header p {
+        color: #94a3b8;
+      }
+
+      .tag-list {
+        width: 30rem;
+        max-width: 90vw;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        gap: 1rem 0;
+        position: relative;
+        padding: 1.5rem 0;
+        overflow: hidden;
+      }
+
+      .loop-slider .inner {
+        display: flex;
+        width: fit-content;
+        animation-name: loop;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: var(--direction);
+        animation-duration: var(--duration);
+      }
+
+      .tag {
+        display: flex;
+        align-items: center;
+        gap: 0 0.2rem;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        background-color: #334155;
+        border-radius: 0.4rem;
+        padding: 0.7rem 1rem;
+        margin-right: 1rem;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
+      }
+      .tag span {
+        font-size: 1.2rem;
+        color: #64748b;
+      }
+
+      .fade {
+        pointer-events: none;
+        background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+        position: absolute;
+        inset: 0;
+      }
+
+      @keyframes loop {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+
+    <!-- partial -->
+    <!-- <script  src="./script.js"></script> -->
+
+    <script type="module">
+      import React from 'https://cdn.skypack.dev/react'
+      import ReactDOM from 'https://cdn.skypack.dev/react-dom'
+
+      const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2']
+      const TAGS = [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Typescript',
+        'Tailwind',
+        'React',
+        'Next.js',
+        'Gatsby',
+        'UI/UX',
+        'SVG',
+        'animation',
+        'webdev'
+      ]
+      const DURATION = 15000
+      const ROWS = 5
+      const TAGS_PER_ROW = 5
+
+      const random = (min, max) => Math.floor(Math.random() * (max - min)) + min
+      const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random())
+
+      const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
+        return /*#__PURE__*/ React.createElement(
+          'div',
+          {
+            className: 'loop-slider',
+            style: {
+              '--duration': `${duration}ms`,
+              '--direction': reverse ? 'reverse' : 'normal'
+            }
+          } /*#__PURE__*/,
+
+          React.createElement('div', { className: 'inner' }, children, children)
+        )
+      }
+
+      const Tag = ({ text } /*#__PURE__*/) =>
+        React.createElement('div', { className: 'tag' }, /*#__PURE__*/ React.createElement('span', null, '#'), ' ', text)
+
+      const App = () =>
+        /*#__PURE__*/
+        React.createElement(
+          'div',
+          { className: 'app' } /*#__PURE__*/,
+          React.createElement(
+            'header',
+            null /*#__PURE__*/,
+            React.createElement('h1', null, 'Infinite Scroll Animation') /*#__PURE__*/,
+            React.createElement('p', null, 'CSS only, content independent, bi-directional, customizable')
+          ) /*#__PURE__*/,
+
+          React.createElement(
+            'div',
+            { className: 'tag-list' },
+            [...new Array(ROWS)].map((_, i /*#__PURE__*/) =>
+              React.createElement(
+                InfiniteLoopSlider,
+                { key: i, duration: random(DURATION - 5000, DURATION + 5000), reverse: i % 2 },
+                shuffle(TAGS)
+                  .slice(0, TAGS_PER_ROW)
+                  .map((tag /*#__PURE__*/) => React.createElement(Tag, { text: tag, key: tag }))
+              )
+            ) /*#__PURE__*/,
+
+            React.createElement('div', { className: 'fade' })
+          )
+        )
+
+      ReactDOM.render(/*#__PURE__*/ React.createElement(App, null), document.body)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        height: 100vh;
+        /*This part is important for centering*/
+        display: grid;
+        place-items: center;
+      }
+
+      .typing-demo {
+        width: 22ch;
+        animation: typing 2s steps(60), blink 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2em;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="typing-demo">吾爱有三宝，一曰慈悲，二曰敬业，三曰信义。</div>
+    </div>
+  </body>
+</html>

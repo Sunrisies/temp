@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div onclick="handleClick()">按钮</div>
+    <script>
+      const handleClick = () => {
+        // alert('点击')
+        const a = document.createElement('a')
+        a.href = 'https://www.baidu.com/s?ie=UTF-8&wd=sa'
+        a.target = '_blank'
+        a.click()
+        console.log('按钮被点击了')
+      }
+    </script>
+  </body>
+</html>
