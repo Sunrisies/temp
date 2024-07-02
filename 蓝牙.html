@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>蓝牙</title>
+  </head>
+  <body>
+    <!-- 按钮点击连接蓝牙 -->
+    <button id="connect" onclick="handleConnect()">连接蓝牙设备</button>
+    <script>
+      function handleConnect() {
+        navigator.bluetooth
+          .requestDevice({
+            acceptAllDevices: true
+          })
+          .then((device) => {
+            console.log('Device Name:', device.name)
+            console.log('Device ID:', device.id)
+            return device.gatt
+          })
+          .then((server) => {
+            // 连接到设备并发现服务
+            server
+              .connect()
+              .then((server) => {
+                return server.getPrimaryService('e0cbf06c-cd8b-4647-bb8a-263b43f0f974')
+              })
+              .then((service) => {
+                // 发现特征
+              })
+              .catch((error) => {
+                console.error('Error:', error)
+              })
+          })
+          .catch((error) => {
+            console.error('Error:', error)
+          })
+      }
+    </script>
+  </body>
+</html>

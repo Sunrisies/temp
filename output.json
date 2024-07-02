@@ -1,0 +1,1022 @@
+[
+  {
+    "name": "翻译",
+    "url": "https://fanyi.baidu.com/translate?aldtype=16047&query=&keyfrom=baidu&smartresult=dict&lang=auto2zh#auto/zh/"
+  },
+  {
+    "name": "河南工业大学",
+    "url": "https://degree.qingshuxuetang.com/hngd/Student/Home"
+  },
+  {
+    "name": "Easy Mock",
+    "url": "https://mock.mengxuegu.com/docs"
+  },
+  {
+    "name": "Mock.js",
+    "url": "http://mockjs.com/"
+  },
+  {
+    "name": "数据模板定义 | Mockjs中文文档-自建文档非官方！",
+    "url": "http://mock.pe666.cn/examples/index.html#number"
+  },
+  {
+    "name": "Mock.js",
+    "url": "http://wll8.gitee.io/mockjs-examples/#String"
+  },
+  {
+    "name": "Web 开发技术 | MDN",
+    "url": "https://developer.mozilla.org/zh-CN/docs/Web"
+  },
+  {
+    "name": "前端代码规范，经典",
+    "url": "https://guide.aotu.io/docs/html/code.html"
+  },
+  {
+    "name": "变量名命名",
+    "url": "https://unbug.github.io/codelf/"
+  },
+  {
+    "name": "定制主题 - Ant Design",
+    "url": "https://ant.design/docs/react/customize-theme-cn"
+  },
+  {
+    "name": "RuoYi 若依官方网站 |后台管理系统|权限管理系统|快速开发框架|企业管理系统|开源框架|微服务框架|前后端分离框架|开源后台系统|RuoYi|RuoYi-Vue|RuoYi-Cloud|RuoYi框架|RuoYi开源|RuoYi视频|若依视频|RuoYi开发文档|若依开发文档|Java开源框架|Java|SpringBoot|SrpingBoot2.0|SrpingCloud|Alibaba|MyBatis|Shiro|OAuth2.0|Thymeleaf|BootStrap|Vue|Element-UI||www.ruoyi.vip",
+    "url": "http://ruoyi.vip/"
+  },
+  {
+    "name": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/zh-CN/"
+  },
+  {
+    "name": "ES6 入门教程 - ECMAScript 6 入门",
+    "url": "https://es6.ruanyifeng.com/"
+  },
+  {
+    "name": "JSON5",
+    "url": "https://json5.org/"
+  },
+  {
+    "name": "闪电⚡",
+    "url": "https://sdyun.cc/#/dashboard"
+  },
+  {
+    "name": "js公式",
+    "url": "https://1loc.dev/"
+  },
+  {
+    "name": "web全栈体系",
+    "url": "https://hejialianghe.gitee.io/"
+  },
+  {
+    "name": "前端知识每日3+1",
+    "url": "http://www.h-camel.com/history.html"
+  },
+  {
+    "name": "简介",
+    "url": "https://lucifer.ren/fe-interview/#/?id=%e7%ae%80%e4%bb%8b"
+  },
+  {
+    "name": "面试题列表 - 前端面试题宝典",
+    "url": "https://fe.ecool.fun/topic-list?tagId=11"
+  },
+  {
+    "name": "基础篇 | 前端面试指南",
+    "url": "https://interview2.poetries.top/docs/base.html"
+  },
+  {
+    "name": "学习 Git，看这一篇就够了！ - 掘金",
+    "url": "https://juejin.cn/post/7111132724185792542"
+  },
+  {
+    "name": "码云",
+    "url": "https://gitee.com/"
+  },
+  {
+    "name": "Git 备忘单",
+    "url": "https://shfshanyue.github.io/cheat-sheets/git"
+  },
+  {
+    "name": "git",
+    "url": "https://learngitbranching.js.org/?locale=zh_CN"
+  },
+  {
+    "name": "uView 2.0 - 全面兼容nvue的uni-app生态框架 - uni-app UI框架",
+    "url": "https://www.uviewui.com/"
+  },
+  {
+    "name": "快速上手 | UmiJS",
+    "url": "https://umijs.org/docs/tutorials/getting-started"
+  },
+  {
+    "name": "开箱即用的中台前端/设计解决方案 - Ant Design Pro",
+    "url": "https://pro.ant.design/zh-CN/"
+  },
+  {
+    "name": "React 官方中文文档 – 用于构建用户界面的 JavaScript 库",
+    "url": "https://zh-hans.reactjs.org/"
+  },
+  {
+    "name": "icon",
+    "url": "https://heroicons.com/"
+  },
+  {
+    "name": "Next.js",
+    "url": "https://nextjs.org/"
+  },
+  {
+    "name": "基本用法 – SWR",
+    "url": "https://swr.vercel.app/zh-CN/examples/basic"
+  },
+  {
+    "name": "Arco Design ",
+    "url": "https://arco.design/"
+  },
+  {
+    "name": "Element Plus",
+    "url": "https://element-plus.gitee.io/zh-CN/"
+  },
+  {
+    "name": "Naive",
+    "url": "https://www.naiveui.com/zh-CN/os-theme"
+  },
+  {
+    "name": "组件 | Element",
+    "url": "https://element.eleme.cn/#/zh-CN/component/installation"
+  },
+  {
+    "name": "Loading加载 | DataV - Vue3",
+    "url": "https://datav-vue3.netlify.app/Other/Loading/Loading.html"
+  },
+  {
+    "name": "介绍 - View Design",
+    "url": "https://www.iviewui.com/view-ui-plus/guide/introduce"
+  },
+  {
+    "name": "vite3",
+    "url": "https://cn.vitejs.dev/guide/"
+  },
+  {
+    "name": "Nuxtjs",
+    "url": "https://v3.nuxtjs.org/"
+  },
+  {
+    "name": "VueUse工具库",
+    "url": "https://vueuse.org/"
+  },
+  {
+    "name": "Axios",
+    "url": "https://axios-http.com/"
+  },
+  {
+    "name": "vue3",
+    "url": "https://staging-cn.vuejs.org/guide/introduction.html"
+  },
+  {
+    "name": "vue2",
+    "url": "https://v2.cn.vuejs.org/v2/guide/"
+  },
+  {
+    "name": "邀请 | 下一代前端工具",
+    "url": "https://vitejs.dev/"
+  },
+  {
+    "name": "Vite | 下一代的前端工具链",
+    "url": "https://cn.vitejs.dev/"
+  },
+  {
+    "name": "Icônes",
+    "url": "https://icones.netlify.app/"
+  },
+  {
+    "name": "Vue.js3",
+    "url": "https://cn.vuejs.org/guide/introduction.html"
+  },
+  {
+    "name": "二、Nuxt 入门 开发文档",
+    "url": "http://moonapi.com/news/12876.html"
+  },
+  {
+    "name": "零代码-前端工具箱",
+    "url": "https://www.lingdaima.com/"
+  },
+  {
+    "name": "A collection of popular layouts and patterns made with CSS - CSS Layout",
+    "url": "https://csslayout.io/"
+  },
+  {
+    "name": "css",
+    "url": "https://lhammer.cn/You-need-to-know-css/#/introduce?v=1"
+  },
+  {
+    "name": "Translucent borders - CSS Tricks",
+    "url": "https://lhammer.cn/You-need-to-know-css/#/translucent-borders"
+  },
+  {
+    "name": "Neumorphism/Soft UI CSS shadow generator",
+    "url": "https://neumorphism.io/#e0e0e0"
+  },
+  {
+    "name": "Smooth Shadow",
+    "url": "https://shadows.brumm.af/"
+  },
+  {
+    "name": "Fancy Border Radius Generator",
+    "url": "https://9elements.github.io/fancy-border-radius/"
+  },
+  {
+    "name": "Glassmorphism CSS Generator | Hype4 Academy",
+    "url": "https://hype4.academy/tools/glassmorphism-generator"
+  },
+  {
+    "name": "图片压缩 - 在线免费图片压缩软件-迅捷压缩在线",
+    "url": "https://yasuo.xunjiepdf.com/img/"
+  },
+  {
+    "name": "CSS加载效果",
+    "url": "https://cssfx.netlify.app/"
+  },
+  {
+    "name": "CSS三角形產生器",
+    "url": "http://apps.eky.hk/css-triangle-generator/zh-hant"
+  },
+  {
+    "name": "文档 | 动漫.js",
+    "url": "https://animejs.com/documentation/"
+  },
+  {
+    "name": "css灵感",
+    "url": "https://csscoco.com/inspiration/#/"
+  },
+  {
+    "name": "Tailwind CSS",
+    "url": "https://tailwindcss.com/"
+  },
+  {
+    "name": "xicons - Icons for Vue &amp; React",
+    "url": "https://xicons.org/#/zh-CN"
+  },
+  {
+    "name": "cssgr.id | 交互式 CSS 网格代码工具和生成器",
+    "url": "https://cssgr.id/"
+  },
+  {
+    "name": "推荐大家使用的CSS书写规范、顺序 | 设计达人",
+    "url": "https://www.shejidaren.com/css-written-specifications.html"
+  },
+  {
+    "name": "series-gauge仪表盘 - makeapie echarts图表可视化案例",
+    "url": "https://www.makeapie.cn/echarts_category/series-gauge_7.html"
+  },
+  {
+    "name": "介绍 | DataV",
+    "url": "http://datav.jiaminghi.com/guide/#%E7%94%A8%E5%89%8D%E5%BF%85%E7%9C%8B"
+  },
+  {
+    "name": "后台管理",
+    "url": "http://192.168.1.185:8001/#/"
+  },
+  {
+    "name": "带你入门前端工程",
+    "url": "https://woai3c.github.io/introduction-to-front-end-engineering/10.html#%E9%87%8D%E6%9E%84%E7%9A%84%E5%8E%9F%E5%88%99"
+  },
+  {
+    "name": "碳 | 创建和共享源代码的精美图片",
+    "url": "https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=material&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false"
+  },
+  {
+    "name": "凤凰架构：构筑可靠的大型分布式系统 | 凤凰架构",
+    "url": "https://icyfenix.cn/"
+  },
+  {
+    "name": "JavaScript | MDN",
+    "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+  },
+  {
+    "name": "任务栏",
+    "url": "https://www.notion.so/0571e35f82224bd4af193e1dd657a68c"
+  },
+  {
+    "name": "Scrape Center",
+    "url": "https://scrape.center/"
+  },
+  {
+    "name": "Python Releases for Windows | Python.org",
+    "url": "https://www.python.org/downloads/windows/"
+  },
+  {
+    "name": "python抓取、解析、下载小电影 - 云中志 - 博客园",
+    "url": "https://www.cnblogs.com/caoleiCoding/p/15449821.html"
+  },
+  {
+    "name": "管理平台",
+    "url": "http://47.96.161.157:1080/login"
+  },
+  {
+    "name": "cloudhao1999/cloud-app-admin: cloud-app-admin 使用了最新的 Vue3.2 + Vite3 + Element-Plus + TypeScript 等主流技术开发。",
+    "url": "https://github.com/cloudhao1999/cloud-app-admin"
+  },
+  {
+    "name": "ProcessOn思维导图、流程图-思维导图模板_思维导图软件免费下载_在线作图协作工具",
+    "url": "https://www.processon.com/"
+  },
+  {
+    "name": "RGB颜色值与十六进制颜色码转换工具",
+    "url": "https://www.sioe.cn/yingyong/yanse-rgb-16/"
+  },
+  {
+    "name": "书舟搜索（kindle吧） - 免费的kindle电子书资源下载",
+    "url": "https://www.shuzhou.cc/"
+  },
+  {
+    "name": "什么图片都可以打开",
+    "url": "https://images.weserv.nl/"
+  },
+  {
+    "name": "Qwerty Learner",
+    "url": "https://kaiyiwing.gitee.io/qwerty-learner/gallery"
+  },
+  {
+    "name": "奈斯",
+    "url": "https://www.niceso.fun/"
+  },
+  {
+    "name": "编程导航",
+    "url": "https://home.code-nav.cn/"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/"
+  },
+  {
+    "name": "Basic Syntax | Markdown Guide",
+    "url": "https://www.markdownguide.org/basic-syntax/"
+  },
+  {
+    "name": "iconfont",
+    "url": "https://www.iconfont.cn/"
+  },
+  {
+    "name": "iP或者域名查询 - iP查询网",
+    "url": "https://h.ip138.com/ip/"
+  },
+  {
+    "name": "证书申请 - FreeSSL.cn一个提供免费HTTPS证书申请的网站",
+    "url": "https://freessl.cn/apply?domains=chaoyangqq.co%2Cwww.chaoyangqq.co&product=trustasia04&from="
+  },
+  {
+    "name": "Docker Hub Container Image Library | App Containerization",
+    "url": "https://hub.docker.com/"
+  },
+  {
+    "name": "npmmirror 镜像站",
+    "url": "https://npmmirror.com/"
+  },
+  {
+    "name": "PNG转SVG - 免费在线将PNG文件转换成SVG",
+    "url": "https://cdkm.com/cn/png-to-svg"
+  },
+  {
+    "name": "Chromium 历史版本下载 ↓",
+    "url": "https://vikyd.github.io/download-chromium-history-version/#/"
+  },
+  {
+    "name": "技术网站推荐 | Pure Admin 保姆级文档",
+    "url": "https://yiming_chang.gitee.io/pure-admin-doc/pages/recommendation/"
+  },
+  {
+    "name": "readme.so",
+    "url": "https://readme.so/editor"
+  },
+  {
+    "name": "网页图标(favicon.ico)在线抓取 - 轻略应用",
+    "url": "https://gonglue.qinggl.com/app/img/icon.jsp"
+  },
+  {
+    "name": "站点流量 — 查看并分析任何网站 | Similarweb",
+    "url": "https://www.similarweb.com/zh/"
+  },
+  {
+    "name": "（●´3｀●）やれやれだぜ",
+    "url": "https://blog.aayu.today/"
+  },
+  {
+    "name": "免费电视剧在线播放,让追剧变得简单 - 茶杯狐 cupfox",
+    "url": "https://www.yf-ch.com/"
+  },
+  {
+    "name": "QQ邮箱",
+    "url": "https://mail.qq.com/cgi-bin/frame_html?sid=ygQH9WpdnSz2o2ED&r=9ec582de9283ec671b7a412c896a1d58&lang=zh"
+  },
+  {
+    "name": "Arduino 代码生成器 --- Code Generator for Arduino",
+    "url": "https://www.duinocodegenerator.com/"
+  },
+  {
+    "name": "用户登录—华为云",
+    "url": "https://auth.huaweicloud.com/authui/login.html?service=https%3A%2F%2Fconsole.huaweicloud.com%2Flcs%2F%3FagencyId%3Dd024e5664f0e4bb8bf2e3069c08b10ef%26region%3Dcn-north-4%26locale%3Dzh-cn%26cloud_route_state%3D%2Flcs%2Fmanager%2FvmList%2FvmDetail%2Fbasic%3FinstanceId%3D1c3b1fff-0a90-442c-8978-ee8a27796e99#/login"
+  },
+  {
+    "name": "登录--ShowDoc",
+    "url": "https://www.showdoc.com.cn/1207745568269674/6090123591593835"
+  },
+  {
+    "name": "测端口",
+    "url": "https://www.ipfingerprints.com/portscan.php"
+  },
+  {
+    "name": "changpengg / shopvidi-website · GitLab",
+    "url": "https://git.hupofintech.com/changpengg/shopvidi-website"
+  },
+  {
+    "name": "平台管理html: 平台管理前端页面,包含用户管理,设备管理,参数管理,角色管理等...",
+    "url": "https://gitee.com/laozhang0816/platform-management-html"
+  },
+  {
+    "name": "登录 - 微信开发者代码管理",
+    "url": "https://git.weixin.qq.com/users/authorize#wechat_redirect"
+  },
+  {
+    "name": "conda",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/"
+  },
+  {
+    "name": "Index of /anaconda/archive/ | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/"
+  },
+  {
+    "name": "控制台-JoySSL",
+    "url": "https://www.joyssl.com/sys/index.html"
+  },
+  {
+    "name": "Apifox - 接口文档分享",
+    "url": "https://xrveeifwnn.apifox.cn/api-116827864"
+  },
+  {
+    "name": "阿里云登录页",
+    "url": "https://account.aliyun.com/login/login.htm?from_type=codealiyun&oauth_callback=http%3A%2F%2Fcode.aliyun.com%2F"
+  },
+  {
+    "name": "微信公众平台",
+    "url": "https://mp.weixin.qq.com/"
+  },
+  {
+    "name": "现代 JavaScript 教程",
+    "url": "https://zh.javascript.info/"
+  },
+  {
+    "name": "TypeScript 教程 - 网道",
+    "url": "https://wangdoc.com/typescript/"
+  },
+  {
+    "name": "重启",
+    "url": "http://47.95.8.126:8082/admin/mango/shell"
+  },
+  {
+    "name": "服务器 - 轻量应用服务器 - 控制台",
+    "url": "https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-qjx662h0"
+  },
+  {
+    "name": "Monibuca - GO语言开源插件式流媒体服务器开发框架 | Monibuca",
+    "url": "https://m7s.live/"
+  },
+  {
+    "name": "Xterminal - 更好用的开发工具，但不止于(SSH/控制台/More)",
+    "url": "https://www.terminal.icu/"
+  },
+  {
+    "name": "常见问题解答 | EMQX 文档",
+    "url": "https://www.emqx.io/docs/zh/latest/faq/faq.html"
+  },
+  {
+    "name": "Android平台签名证书(.keystore)生成指南 - DCloud问答",
+    "url": "https://ask.dcloud.net.cn/article/35777"
+  },
+  {
+    "name": "Firebase 控制台",
+    "url": "https://console.firebase.google.com/project/fir-3063e/overview"
+  },
+  {
+    "name": "闪电地址发布页",
+    "url": "https://sd.369.cyou/"
+  },
+  {
+    "name": "Ant Design Mobile - 移动端设计规范",
+    "url": "https://rn.mobile.ant.design/index-cn"
+  },
+  {
+    "name": "云原生应用市场",
+    "url": "https://hub.grapps.cn/"
+  },
+  {
+    "name": "Prisma 官方中文文档 - 下一代Node.js、TypeScript、Go 的数据库 ORM",
+    "url": "https://prisma.yoga/"
+  },
+  {
+    "name": "中文网",
+    "url": "https://nodejs.cn/#nest"
+  },
+  {
+    "name": "Apifox",
+    "url": "https://www.apifox.cn/web/user/login"
+  },
+  {
+    "name": "fir.im - 免费应用内测托管平台|iOS应用Beta测试分发|Android应用内测分发",
+    "url": "https://www.betaqr.com.cn/"
+  },
+  {
+    "name": "WebGL 理论基础",
+    "url": "https://webglfundamentals.org/webgl/lessons/zh_cn/"
+  },
+  {
+    "name": "微信公众号 Markdown 编辑器",
+    "url": "https://prod.zkqiang.cn/wxeditor/index.html#"
+  },
+  {
+    "name": "查看我的 IP 地址 | 查询本机 IP 地址及归属地 | 查看 DNS 出口 IP | 测试 CDN 命中节点 | Sukka | https://ip.skk.moe",
+    "url": "https://ip.skk.moe/"
+  },
+  {
+    "name": "vue 使用 cesium | A-Zero --- vue使用cesium | A-Zero",
+    "url": "http://www.1ge0.com/gis/cesium/02.html#%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E8%A7%86%E5%9B%BE%E8%8C%83%E5%9B%B4"
+  },
+  {
+    "name": "Trending TypeScript repositories on GitHub today",
+    "url": "https://github.com/trending/typescript?since=daily"
+  },
+  {
+    "name": "在线JSON转typescript工具 - ToolTT在线工具箱",
+    "url": "https://tooltt.com/json2typescript/"
+  },
+  {
+    "name": "Next vs Vue vs 混音 |比较 NPM 包 --- next vs vue vs remix | Compare NPM Packages",
+    "url": "https://npm-compare.com/next,vue,remix/#timeRange=THREE_YEARS"
+  },
+  {
+    "name": "Chat with Open Large Language Models",
+    "url": "https://arena.lmsys.org/#/"
+  },
+  {
+    "name": "npmmirror 镜像站",
+    "url": "https://npmmirror.com/package/@zhuzhongqian/firefly/versions"
+  },
+  {
+    "name": "Vue ClI 源码探索 | Vue Learn Share",
+    "url": "https://llccing.github.io/vue-learn-share/vue-cli/#%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96"
+  },
+  {
+    "name": "代码随想录",
+    "url": "https://www.programmercarl.com/"
+  },
+  {
+    "name": "v0 by Vercel",
+    "url": "https://v0.dev/"
+  },
+  {
+    "name": "MSYS2",
+    "url": "https://www.msys2.org/"
+  },
+  {
+    "name": "C 语言实现 2048 游戏_C - 蓝桥云课",
+    "url": "https://www.lanqiao.cn/courses/155"
+  },
+  {
+    "name": "文档概述 · 萤石开放平台API文档",
+    "url": "https://open.ys7.com/help/1771"
+  },
+  {
+    "name": "计算中心点 | Turf.js中文网",
+    "url": "https://turfjs.fenxianglu.cn/category/measurement/center.html"
+  },
+  {
+    "name": "彩虹糖🍬-引导页",
+    "url": "https://v1.chyhome.com/"
+  },
+  {
+    "name": "值得学习的小型项目 - Rust By Practice( Rust 练习实践 )",
+    "url": "https://practice-zh.course.rs/elegant-code-base.html"
+  },
+  {
+    "name": "基于 Nginx 实现一个灰度上线系统",
+    "url": "https://mp.weixin.qq.com/s/36g51pc-qeO3GDfywiHjMQ"
+  },
+  {
+    "name": "网道 - 互联网开发文档",
+    "url": "https://wangdoc.com/"
+  },
+  {
+    "name": "Warp：重新构想的终端 --- Warp: Your terminal, reimagined",
+    "url": "https://www.warp.dev/"
+  },
+  {
+    "name": "下载 OrbStack ·快速、轻便、简单的 Docker Desktop 替代品 --- Download OrbStack · Fast, light, simple Docker Desktop alternative",
+    "url": "https://orbstack.dev/download"
+  },
+  {
+    "name": "泡沫 --- Bubble",
+    "url": "https://bubble-awesome-profile.vercel.app/"
+  },
+  {
+    "name": "300 (300×300)",
+    "url": "https://i.pravatar.cc/300"
+  },
+  {
+    "name": "Top Pens of 2023 on CodePen",
+    "url": "https://codepen.io/2023/popular"
+  },
+  {
+    "name": "易德沃 --- EasyDevo",
+    "url": "https://easydevo.boringboring.design/"
+  },
+  {
+    "name": "七牛云OSS图床 | 粥里有勺糖（dev）",
+    "url": "https://imgbed.sugarat.top/"
+  },
+  {
+    "name": "Kimi.ai - 帮你看更大的世界",
+    "url": "https://kimi.moonshot.cn/chat/cp2p6jkudu6chh7bna9g"
+  },
+  {
+    "name": "内网云——内网也可以变成云",
+    "url": "https://www.neiwangyun.net/dashboard/change_cdkeys/"
+  },
+  {
+    "name": "EPSG.io：全球坐标系 --- EPSG.io: Coordinate Systems Worldwide",
+    "url": "https://epsg.io/"
+  },
+  {
+    "name": "JavaScript Robotics： GPS - Johnny-Five 的默认 GPS --- JavaScript Robotics: GPS - Default GPS with Johnny-Five",
+    "url": "https://johnny-five.io/examples/gps/"
+  },
+  {
+    "name": "Tailblocks — Ready-to-use Tailwind CSS blocks",
+    "url": "https://tailblocks.cc/"
+  },
+  {
+    "name": "起始页和示例 |Preline UI，使用 Tailwind CSS 制作 --- Starter Pages &amp; Examples | Preline UI, crafted with Tailwind CSS",
+    "url": "https://preline.co/examples.html"
+  },
+  {
+    "name": "Free Open Source Tailwind CSS Components | HyperUI",
+    "url": "https://www.hyperui.dev/"
+  },
+  {
+    "name": "Introduction | NextUI - Beautiful, fast and modern React UI Library",
+    "url": "https://nextui.org/docs/guide/introduction"
+  },
+  {
+    "name": "842 Cards: CSS &amp; Tailwind",
+    "url": "https://uiverse.io/cards?page=10"
+  },
+  {
+    "name": "如何编译 C++ 程序：轻松搞定 CMake - 飞书云文档",
+    "url": "https://hkrb7870j3.feishu.cn/docx/KZVidODbpoEZ4CxgIFJc5jMonZe"
+  },
+  {
+    "name": "TypeScript：文档 - 实用程序类型 --- TypeScript: Documentation - Utility Types",
+    "url": "https://www.typescriptlang.org/docs/handbook/utility-types.html"
+  },
+  {
+    "name": "新页面",
+    "url": "https://www.wolai.com/kzGjpUyRbWvSpiPcDM1HNF"
+  },
+  {
+    "name": "Hexo",
+    "url": "https://hexo.io/zh-cn/"
+  },
+  {
+    "name": "| Aayu Yain = 学无止境 = 阿宇的可爱博客",
+    "url": "https://blog.aayu.today/about/"
+  },
+  {
+    "name": "Hexo -1- 博客搭建基础教程 - 又见苍岚",
+    "url": "https://www.zywvvd.com/notes/hexo/website/1-hexo-build/Hexo/"
+  },
+  {
+    "name": "Hexo 主题 Shoka &amp; multi-markdown-it 渲染器使用说明 - Theme Shoka Documentation - 二进制杂谈 - 计算机科学 | Yume Shoka = 優萌初華 = 有夢書架",
+    "url": "https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/"
+  },
+  {
+    "name": "首页 - ECharts Demo集,echarts gallery社区,Make A Pie,分享你的可视化作品isqqw.com",
+    "url": "https://www.isqqw.com/"
+  },
+  {
+    "name": "makeapie echarts图表可视化案例",
+    "url": "https://www.makeapie.cn/echarts"
+  },
+  {
+    "name": "TypeScript ",
+    "url": "https://juejin.cn/post/6916495590754877453"
+  },
+  {
+    "name": "trekhleb/javascript-algorithms：📝 用 Ja​​vaScript 实现的算法和数据结构，带有解释和进一步阅读的链接",
+    "url": "https://github.com/trekhleb/javascript-algorithms"
+  },
+  {
+    "name": "🔥【万字】透过分析 webpack 面试题，构建 webpack5.x 知识体系 - 掘金",
+    "url": "https://juejin.cn/post/7023242274876162084"
+  },
+  {
+    "name": "Sequelize 简介 | Sequelize 中文文档 | Sequelize 中文网",
+    "url": "https://www.sequelize.com.cn/"
+  },
+  {
+    "name": "发现导航 - 精选实用导航网站",
+    "url": "https://www.nav3.cn/#/light"
+  },
+  {
+    "name": "【快速上手】vite打包配置详解—手把手教你配置vite - 唯品秀前端博客",
+    "url": "https://www.weipxiu.com/8649.html"
+  },
+  {
+    "name": "♪(^∇^*)欢迎回来！Butterfly 主题美化（一） | 海拥",
+    "url": "http://haiyong.site/post/22e1d5da.html"
+  },
+  {
+    "name": "在线生成ICO图标",
+    "url": "https://www.51tool.com/ico/"
+  },
+  {
+    "name": "nuxt-blog-client/nuxt.config.js at master · galaxy-s10/nuxt-blog-client",
+    "url": "https://github.com/galaxy-s10/nuxt-blog-client/blob/master/nuxt.config.js"
+  },
+  {
+    "name": "FinalShell SSH工具,服务器管理,远程桌面加速软件,支持Windows,macOS,Linux,版本4.2.4 - FinalShell官网",
+    "url": "http://www.hostbuf.com/t/988.html"
+  },
+  {
+    "name": "NATAPP-内网穿透 基于ngrok的国内高速内网映射工具",
+    "url": "https://natapp.cn/"
+  },
+  {
+    "name": "bat 批处理教程_w3cschool",
+    "url": "https://www.w3cschool.cn/dosmlxxsc1/wvqyr9.html"
+  },
+  {
+    "name": "基本用法 - nestjs-prisma --- Basic Usage - nestjs-prisma",
+    "url": "https://nestjs-prisma.dev/docs/basic-usage/"
+  },
+  {
+    "name": "DiskGenius – 正式版下载|免费下载",
+    "url": "https://www.diskgenius.cn/download.php"
+  },
+  {
+    "name": "分页（参考） | Prisma 中文网",
+    "url": "https://prisma.nodejs.cn/orm/prisma-client/queries/pagination"
+  },
+  {
+    "name": "Cesium学习系列汇总",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU1ODcyMjEwOA==&mid=2247484268&idx=1&sn=861480d7108f70a2fd16000df4df2db1&chksm=fc237e3fcb54f72904a9cd57a3c2bf325e30a00de614ec3145dcb1f0310e7c0f9362d4f00742&scene=18#wechat_redirect"
+  },
+  {
+    "name": "I3S Feature Picking - Cesium Sandcastle",
+    "url": "https://sandcastle.cesium.com/?src=I3S%20Feature%20Picking.html"
+  },
+  {
+    "name": "Viewer - Cesium Documentation",
+    "url": "http://cesium.xin/cesium/cn/Documentation1.72/Viewer.html"
+  },
+  {
+    "name": "Stories | Cesium ion",
+    "url": "https://cesium.com/ion/stories/94815c89-8583-43be-8b08-ef2451479845"
+  },
+  {
+    "name": "功能示例(Vue版)列表 | Mars3D三维可视化平台 | 火星科技",
+    "url": "http://zhi119.com/"
+  },
+  {
+    "name": "Cesium教程系列汇总 - fu*k - 博客园",
+    "url": "https://www.cnblogs.com/fuckgiser/p/5706842.html"
+  },
+  {
+    "name": "cesium基础知识-其他教程-腾讯课堂",
+    "url": "https://ke.qq.com/course/468292/3985600802137412#term_id=100560563"
+  },
+  {
+    "name": "查看器 - Cesium 文档",
+    "url": "https://cesium.com/learn/cesiumjs/ref-doc/Viewer.html#.ConstructorOptions"
+  },
+  {
+    "name": "DataV.GeoAtlas地理小工具系列",
+    "url": "http://datav.aliyun.com/portal/school/atlas/area_selector"
+  },
+  {
+    "name": "Documentation - Leaflet - 一个交互式地图 JavaScript 库",
+    "url": "https://leafletjs.cn/reference.html"
+  },
+  {
+    "name": "Examples | Mapbox GL JS | Mapbox",
+    "url": "https://docs.mapbox.com/mapbox-gl-js/example/"
+  },
+  {
+    "name": "CesiumJs - 第6页 共7页 - 完竣世界",
+    "url": "https://www.wanjunshijie.com/note/cesiumjs/page/6"
+  },
+  {
+    "name": "无人机跟无人船功能 - 百度脑图",
+    "url": "https://naotu.baidu.com/file/a6f29859d9e06996096819312e7c9e93?token=7f12c7dd341997a6"
+  },
+  {
+    "name": "xtfge/cesium-draw: This is a Vue + Cesium project. Its main functions include plotting and editing marker, polyline and polygon.",
+    "url": "https://github.com/xtfge/cesium-draw"
+  },
+  {
+    "name": "fengtianxi001/MF-UAV: 🛫 一个基于cesium的无人机控制模拟案例",
+    "url": "https://github.com/fengtianxi001/MF-UAV"
+  },
+  {
+    "name": "dengxiaoning/cesium_dev_kit: 工作之余整理收集了一些Cesium常用的功能(如模型控制、分析、各种材质使用、Shader特效等)，使用ES6进行封装，希望能对小伙伴学习与工作带来一些便利，如有不足之处欢迎讨论交流一起学习共同进步，也请路过的小伙伴点个赞支持支持谢谢！",
+    "url": "https://github.com/dengxiaoning/cesium_dev_kit"
+  },
+  {
+    "name": "干货！解决Cesium中Entity移动漂移的问题-阿里云开发者社区",
+    "url": "https://developer.aliyun.com/article/1001308"
+  },
+  {
+    "name": "在vite创建的vue3项目中使用Cesium加载czml路径信息和无人机模型",
+    "url": "https://www.yii666.com/blog/561864.html"
+  },
+  {
+    "name": "Cesium：地球中实现点击浮动弹窗_51CTO博客_cesium悬浮弹窗",
+    "url": "https://blog.51cto.com/u_15349906/5091058"
+  },
+  {
+    "name": "(11条消息) cesium自定义弹窗_新晋代码小菜鸟的博客-CSDN博客_cesium弹窗",
+    "url": "https://blog.csdn.net/weixin_42274795/article/details/123049459"
+  },
+  {
+    "name": "b站",
+    "url": "https://www.bilibili.com/"
+  },
+  {
+    "name": "美工云 - 上美工云，下一种工作！",
+    "url": "https://meigongyun.com/"
+  },
+  {
+    "name": "大作网-全球高清图片素材_图片搜索网站_设计师免费版权图片素材-找灵感,上大作",
+    "url": "https://www.bigbigwork.com/"
+  },
+  {
+    "name": "免费正版高清图片素材库 超过2.6百万张优质图片和视频素材可供免费使用和下载 - Pixabay",
+    "url": "https://pixabay.com/zh/"
+  },
+  {
+    "name": "闪电⚡",
+    "url": "https://shandianpro.com/#/dashboard"
+  },
+  {
+    "name": "Apache Tomcat® - Apache Tomcat 8 软件下载",
+    "url": "https://tomcat.apache.org/download-80.cgi"
+  },
+  {
+    "name": "Java 下载 | 甲骨文",
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8"
+  },
+  {
+    "name": "发布 · coreybutler/nvm-windows",
+    "url": "https://github.com/coreybutler/nvm-windows/releases"
+  },
+  {
+    "name": "在 Windows 上安装 MySQL",
+    "url": "https://www.sjkjc.com/mysql/install-on-windows/"
+  },
+  {
+    "name": "FinalShell SSH工具,服务器管理,远程桌面加速软件,支持Windows,macOS,Linux,版本4.3 - FinalShell官网",
+    "url": "https://www.hostbuf.com/t/988.html"
+  },
+  {
+    "name": "Html/CSS/JavaScript-前端自学笔记 - XOBEMIT",
+    "url": "https://www.huaign.com/post/15.html"
+  },
+  {
+    "name": "更多",
+    "url": "https://wp-boke.work/more"
+  },
+  {
+    "name": "Viper3の小破站🍇",
+    "url": "https://viper3.top/"
+  },
+  {
+    "name": "心月云",
+    "url": "https://wch666.com/"
+  },
+  {
+    "name": "vcoppe.github.io/Leaflet.RouteEditor/",
+    "url": "https://vcoppe.github.io/Leaflet.RouteEditor/"
+  },
+  {
+    "name": "Release v1.0.4 Bug fixes and a new theme · aristocratos/btop4win",
+    "url": "https://github.com/aristocratos/btop4win/releases/tag/v1.0.4"
+  },
+  {
+    "name": "android原生开发流程 安卓原生app开发环境搭建_lingjuli的技术博客_51CTO博客",
+    "url": "https://blog.51cto.com/u_39029/7448696"
+  },
+  {
+    "name": "Windows 11终端美化记录 - 堆上小栈",
+    "url": "https://dev.net.cn/276.html"
+  },
+  {
+    "name": "Versions: Chinese (Simplified) Language Pack / 中文语言包 - IntelliJ IDEs Plugin | Marketplace --- Versions: Chinese (Simplified) Language Pack / 中文语言包 - IntelliJ IDEs Plugin | Marketplace",
+    "url": "https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions"
+  },
+  {
+    "name": "07 | 设置centos中jenkins服务为开机自启动",
+    "url": "http://lihuaxi.xjx100.cn/news/90492.html?action=onClick"
+  },
+  {
+    "name": "登山扣元件 --- Karabiner-Elements",
+    "url": "https://karabiner-elements.pqrs.org/"
+  },
+  {
+    "name": "太空嗅探器下载 --- SpaceSniffer download",
+    "url": "http://www.uderzo.it/main_products/space_sniffer/download_alt.html"
+  },
+  {
+    "name": "自动热键 --- AutoHotkey",
+    "url": "https://www.autohotkey.com/"
+  },
+  {
+    "name": "KeyTweak - 下载 --- KeyTweak - Download",
+    "url": "https://keytweak.en.softonic.com/"
+  },
+  {
+    "name": "ChatGPT - 工具猫",
+    "url": "https://www.toolmao.com/sites/1766.html"
+  },
+  {
+    "name": "物联网第一节,esp8622 - 初体验 - 程序员聚集地",
+    "url": "https://java456.com/blog/843"
+  },
+  {
+    "name": "CentOS 7 安装 docker compose 教程-腾讯云开发者社区-腾讯云",
+    "url": "https://cloud.tencent.com/developer/article/1855291"
+  },
+  {
+    "name": "发布 · docker/compose --- Releases · docker/compose",
+    "url": "https://github.com/docker/compose/releases"
+  },
+  {
+    "name": "配置估算 | EMQ",
+    "url": "https://www.emqx.com/zh/server-estimate"
+  },
+  {
+    "name": "搜索 命令，Linux 搜索 命令详解：最专业的Linux命令大全，命令搜索引擎，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。 - Linux 命令搜索引擎",
+    "url": "https://wangchujiang.com/linux-command/hot.html"
+  },
+  {
+    "name": "小林coding",
+    "url": "https://xiaolincoding.com/"
+  },
+  {
+    "name": "优秀的开源项目 - Java陈序员",
+    "url": "https://chencoding.top:8090/#/README"
+  },
+  {
+    "name": "如何在Windows中去掉U盘写保护？这6种方法好！",
+    "url": "https://www.disktool.cn/content-center/remove-write-protection-from-usb-1016.html"
+  },
+  {
+    "name": "文件管理命令 | 爱编程的大丙",
+    "url": "https://subingwen.cn/linux/file-commands/"
+  },
+  {
+    "name": "chrome://net-internals/#hsts",
+    "url": "chrome://net-internals/#hsts"
+  },
+  {
+    "name": "一行命令清理自己电脑中所有的node_modules - 知乎",
+    "url": "https://zhuanlan.zhihu.com/p/340646285"
+  },
+  {
+    "name": "铬 --- Chromium",
+    "url": "https://issues.chromium.org/issues"
+  },
+  {
+    "name": "仓库服务",
+    "url": "https://developer.aliyun.com/mvn/view"
+  },
+  {
+    "name": "在中国网络环境下使用 Flutter - Flutter 中文文档 - Flutter 中文开发者网站 - Flutter",
+    "url": "https://flutter.cn/community/china"
+  },
+  {
+    "name": "图标工场 - 移动应用图标/启动图生成工具，一键生成所有尺寸的应用图标/启动图",
+    "url": "https://icon.wuruihong.com/"
+  },
+  {
+    "name": "Z-Library – 世界上最大的电子书图书馆。您通往知识和文化的门户。 --- Z-Library – the world’s largest e-book library. Your gateway to knowledge and culture.",
+    "url": "https://z-library.se/"
+  },
+  {
+    "name": "Shadertoy BETA",
+    "url": "https://www.shadertoy.com/"
+  },
+  {
+    "name": "ChatGPT使用GPT-3.5.",
+    "url": "https://chat.openai.com/c/0d3e76ff-b6ea-43b6-bea1-79c2509d816a"
+  },
+  {
+    "name": "Next.js - shadcn/ui --- Next.js - shadcn/ui",
+    "url": "https://ui.shadcn.com/docs/installation/next"
+  }
+]
