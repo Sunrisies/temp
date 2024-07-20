@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移入移出特效</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .card-box-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        h2 {
+            color: #ffffff;
+        }
+        figure.card {
+            font-family: 幼圆;
+            position: relative;
+            overflow: hidden;
+            width: 20%;
+            max-height: 220px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 16px;
+            margin: 0;
+        }
+        figure.card * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        figure.card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        figure.card:after,
+        figure.card:before,
+        figure.card figcaption:after,
+        figure.card figcaption:before {
+            background: #0a0a0a;
+            height: 25%;
+            position: absolute;
+            content: '';
+            opacity: 0;
+            -webkit-transition: all 0.35s steps(4);
+            transition: all 0.35s steps(4);
+            z-index: 1;
+            left: 50%;
+            right: 50%;
+        }
+        figure.card:before {
+            top: 0;
+            -webkit-transition-delay: 0;
+            transition-delay: 0;
+        }
+        figure.card:after {
+            top: 25%;
+            -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+        }
+        figure.card figcaption:before {
+            top: 50%;
+            -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+            z-index: -1;
+        }
+        figure.card figcaption:after {
+            top: 75%;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+            z-index: -1;
+        }
+        figure.card figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            padding: 30px;
+        }
+        figure.card h2,
+        figure.card p {
+            margin: 0;
+            width: 100%;
+            opacity: 0;
+        }
+        figure.card h2 {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        figure.card p {
+            font-weight: 300;
+        }
+        figure.card:hover:after,
+        figure.card.hover:after,
+        figure.card:hover:before,
+        figure.card.hover:before,
+        figure.card:hover figcaption:after,
+        figure.card.hover figcaption:after,
+        figure.card:hover figcaption:before,
+        figure.card.hover figcaption:before {
+            left: 0;
+            right: 0;
+            opacity: 0.8;
+        }
+        figure.card:hover figcaption h2,
+        figure.card.hover figcaption h2,
+        figure.card:hover figcaption p,
+        figure.card.hover figcaption p {
+            -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+        }
+        figure.card:hover figcaption h2,
+        figure.card.hover figcaption h2 {
+            opacity: 1;
+        }
+        figure.card:hover figcaption p,
+        figure.card.hover figcaption p {
+            opacity: 0.7;
+            padding-top: 1rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+<section class="card-box-list">
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+    <figure class="card ">
+        <img src="https://images.pexels.com/photos/5923340/pexels-photo-5923340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="sample96"/>
+        <figcaption>
+            <h2>ZHOU YI</h2>
+            <p>高质量、高水平、快速地开发各平台的小程序,可进行开发 iOS 和 Android 等跨端APP应用程序.</p>
+        </figcaption>
+    </figure>
+</section>
+</body>
+</html>
+
+

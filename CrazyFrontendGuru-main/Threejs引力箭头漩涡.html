@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js DEMO</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r84/examples/js/controls/OrbitControls.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        canvas {
+            width: 100vw;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+<body>
+
+<script>
+    // <<<<<---------------- Three.js引力路径箭头漩涡 ---------------->>>>>
+
+    // 这是一个在three.js中使用实例化几何体及其令人难以置信的性能的例子。
+    // 它呈现出大量的箭头形状，沿着它们的引力路径围绕着一个看不见的中心。
+    // 我尽我所能以一种干净的方式编写这段代码，并添加了许多注释，以清楚地说明发生了什么以及为什么。
+    // 它应该从上到下阅读。
+
+    // 我们稍后会用到一些常数
+    const NUM_INSTANCES = 6000;
+    const ARROW_FORWARD = new THREE.Vector3(0, 0, 1);
+    const UP = new THREE.Vector3(0, 1, 0);
+
+    // V3在需要时用作临时向量。这样做可以帮助显著减少gc开销。
+    const v3 = new THREE.Vector3();
+
+    /**
+     * 初始化 demo.
+     *
+     * 这个函数在renderloop开始之前被调用。
+     * 它返回一个更新函数，该函数在每一帧的renderloop中被调用。
+     * 通过这种方式，我们可以将有趣的部分与设置three.js之类的无聊工作分开。
+     * @return {function(t:Number):void}一个将在每一帧被调用来更新模拟的函数。
+     */
+    function init(scene) {
+        // helpers
+        const numInstances = NUM_INSTANCES;
+
+        // 实例化基本上意味着我们将绘制相同奇异几何的多个实例。
+        // 这些实例不受网格等属性的控制。位置,网状。旋转等，而是使用所谓的实例属性。
+        // 将绘制多少实例取决于这些属性数组的长度。
+        // 因此，如果数组有10个条目，将绘制10个实例。
+        // 这些项中的每一个都可以有多个分量(例如3个分量——x, y和z——代表位置)。
+        // 这是在创建属性时配置的
+
+        // 设置实例属性缓冲区
+        const iOffsets = new Float32Array(numInstances * 3);
+        const iRotations = new Float32Array(numInstances * 4);
+        const iColors = new Float32Array(numInstances * 4);
+
+        // 使用实例属性设置几何图形。通过从下面在' getArrowGeometry() '中创建的箭头几何复制属性(position, normal)来初始化几何。
+        const geometry = new THREE.InstancedBufferGeometry();
+        geometry.copy(getArrowGeometry());
+
+        // 在每个实例中，我们想要控制箭头的位置、旋转和基本颜色。为了更好的可读性和避免冲突，实例属性以'i'作为前缀。
+        geometry.addAttribute('iOffset',
+            new THREE.InstancedBufferAttribute(iOffsets, 3, 1));
+        geometry.addAttribute('iRotation',
+            new THREE.InstancedBufferAttribute(iRotations, 4, 1));
+        geometry.addAttribute('iColor',
+            new THREE.InstancedBufferAttribute(iColors, 4, 1));
+
+        // 我们将改变每一帧的位置和偏移量。
+        // 我不确定这有多大的影响，但根据文档，它允许GPU驱动程序以某种方式优化内存分配。
+        geometry.attributes.iRotation.setDynamic(true);
+        geometry.attributes.iOffset.setDynamic(true);
+
+        // 属性缓冲区的模拟和操作发生在下面定义的arrow类中。
+        // 现在只需要注意有一个箭头数组，每个箭头都有一个实例索引，用于计算其位置、方向和颜色在这些属性缓冲区中的存储位置。.
+        const arrows = [];
+        for (let index = 0; index < numInstances; index++) {
+            arrows.push(new Arrow(index, {
+                position: iOffsets,
+                rotation: iRotations,
+                color: iColors
+            }));
+        }
+
+        // 创建现在包含所有实例的网格。(material的定义在后面一点)
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        // 实例的真实位置不能从网格位置和边界框中确定，所以我们需要禁用three.js实现的挫折剔除
+        mesh.frustumCulled = false;
+
+        // 这是我们对renderloop的贡献:存储上次更新的时间
+        let t0 = performance.now();
+        return t => {
+            // 限制每次呼叫的最大时间步长(否则箭头将消失，如果你从TAB切换一段时间)
+            const dt = Math.min((t - t0) / 1000, 0.1);
+
+            // update the simulation for all arrows
+            for (let i = 0; i < numInstances; i++) {
+                arrows[i].update(dt);
+            }
+
+            // mark the instance-attributes as changed so they will
+            // get uploaded to the GPU
+            geometry.attributes.iRotation.needsUpdate = true;
+            geometry.attributes.iOffset.needsUpdate = true;
+
+            t0 = t;
+        };
+    }
+
+
+    /**
+     * arrow类为arrow实例实现了模拟和缓冲区更新的逻辑。
+     */
+    class Arrow {
+        constructor(index, buffers) {
+            this.index = index;
+            this.buffers = buffers;
+
+            // the offsets at which data for this arrow is located
+            // in the attribute-buffers
+            this.offsets = {
+                position: index * 3,
+                rotation: index * 4,
+                color: index * 4
+            }
+
+            // these properties store the current state of the arrow. those
+            // will be written to the attribute-buffers after updating.
+            this.rotation = new THREE.Quaternion();
+            this.position = new THREE.Vector3();
+            this.velocity = new THREE.Vector3();
+            this.color = new THREE.Color();
+
+            this.init();
+            this.update();
+        }
+
+        /**
+         * Initialize arrow with randomized color, position and velocity.
+         * Velocity is initially set to be below escape-velocity
+         * (based on entirely unscientific number tweaking) - otherwise it
+         * will just look boring.
+         */
+        init() {
+            // colors won't be modified later, so write them to the
+            // buffer right away
+            this.color.setHSL(rnd(0.2, 0.6), 0.2, rnd(0.3, 0.7));
+            this.color.toArray(this.buffers.color, this.offsets.color);
+
+            // for initial positions we're using spherical coordinates, this
+            // makes it easier to have them evenly distibuted around the
+            // center.
+            this.position.setFromSpherical({
+                radius: rnd(10, 300, 1.6),
+                phi: Math.PI / 2 + rnd(-0.1, 0.1),
+                theta: rnd(0, 2 * Math.PI)
+            });
+
+            // this is the random-part of the velocity
+            v3.set(rnd(5), rnd(4), rnd(3));
+
+            // compute the initial velocity: perpendicular to the radius,
+            // somewhat below the escape-velocity, randomized
+            this.velocity.copy(this.position)
+                .cross(UP)
+                .normalize()
+                .multiplyScalar(Math.PI * Math.PI)
+                .add(v3);
+        }
+
+        /**
+         * Update the velocity, position and orientation for a
+         * given timestep.
+         *
+         * NOTE: this is extremely hot code (4000 arrows: ~240k
+         * calls/second). No allocations and preventable calculations
+         * here.
+         */
+        update(dt) {
+            // update velocity from 'gravity' towards origin
+            v3.copy(this.position)
+                .multiplyScalar(-Math.PI / this.position.lengthSq());
+            this.velocity.add(v3);
+
+            // update position from velocity
+            v3.copy(this.velocity).multiplyScalar(dt);
+            this.position.add(v3);
+
+            // update rotation from direction of velocity
+            v3.copy(this.velocity).normalize();
+            this.rotation.setFromUnitVectors(ARROW_FORWARD, v3);
+
+            // write udpated values into attribute-buffers
+            this.position.toArray(
+                this.buffers.position, this.offsets.position);
+            this.rotation.toArray(
+                this.buffers.rotation, this.offsets.rotation);
+        }
+    }
+
+
+    /**
+     * Creates the arrow-geometry.
+     * @return {THREE.BufferGeometry}
+     */
+    function getArrowGeometry() {
+        const shape = new THREE.Shape([
+            [-0.8, -1], [-0.03, 1], [-0.01, 1.017], [0.0, 1.0185],
+            [0.01, 1.017], [0.03, 1], [0.8, -1], [0, -0.5]
+        ].map(p => new THREE.Vector2(...p)));
+
+        const arrowGeometry = new THREE.ExtrudeGeometry(shape, {
+            amount: 0.3,
+            bevelEnabled: true,
+            bevelSize: 0.1,
+            bevelThickness: 0.1,
+            bevelSegments: 2
+        });
+
+        // orient the geometry into x/z-plane, roughly centered
+        const matrix = new THREE.Matrix4()
+            .makeRotationX(Math.PI / 2)
+            .setPosition(new THREE.Vector3(0, 0.15, 0));
+
+        arrowGeometry.applyMatrix(matrix);
+
+        // convert to buffer-geometry
+        return new THREE.BufferGeometry().fromGeometry(arrowGeometry);
+    }
+
+
+    /**
+     * The material required to render the instanced geometry. We are
+     * using a raw shader material so we don't have to deal with possible
+     * naming-conflics and so on.
+     */
+    const material = new THREE.RawShaderMaterial({
+        uniforms: {},
+        vertexShader: `
+    precision highp float;
+    // uniforms (all provided by default by three.js)
+    uniform mat4 modelViewMatrix;
+    uniform mat4 projectionMatrix;
+    uniform mat3 normalMatrix;
+
+    // default attributes (from arrow-geometry)
+    attribute vec3 position;
+    attribute vec3 normal;
+
+    // instance attributes
+    attribute vec3 iOffset;
+    attribute vec4 iRotation;
+    attribute vec4 iColor;
+
+    // shading-parameters
+    varying vec3 vLighting;
+    varying vec4 vColor;
+
+    // apply a rotation-quaternion to the given vector
+    // (source: https://goo.gl/Cq3FU0)
+    vec3 rotate(const vec3 v, const vec4 q) {
+      vec3 t = 2.0 * cross(q.xyz, v);
+      return v + q.w * t + cross(q.xyz, t);
+    }
+
+    void main() {
+      // compute lighting (source: https://goo.gl/oS2vIY)
+      vec3 ambientColor = vec3(1.0) * 0.3;
+      vec3 directionalColor = vec3(1.0) * 0.7;
+      vec3 lightDirection = normalize(vec3(-0.5, 1.0, 1.5));
+
+      // diffuse-shading
+      vec3 n = rotate(normalMatrix * normal, iRotation);
+      vLighting = ambientColor +
+          (directionalColor * max(dot(n, lightDirection), 0.0));
+
+      vColor = iColor;
+
+      // instance-transform, mesh-transform and projection
+      gl_Position = projectionMatrix * modelViewMatrix *
+          vec4(iOffset + rotate(position, iRotation), 1.0);
+    }
+  `,
+
+        fragmentShader: `
+    precision highp float;
+    varying vec3 vLighting;
+    varying vec4 vColor;
+
+    void main() {
+      gl_FragColor = vColor * vec4(vLighting, 1.0);
+      gl_FragColor.a = 1.0;
+    }
+  `,
+
+        side: THREE.DoubleSide,
+        transparent: false
+    });
+
+
+    /**
+     * Random numbers, with range and optional bias.
+     */
+    function rnd(min = 1, max = 0, pow = 1) {
+        if (arguments.length < 2) {
+            max = min;
+            min = 0;
+        }
+
+        const rnd = (pow === 1) ?
+            Math.random() :
+            Math.pow(Math.random(), pow);
+
+        return (max - min) * rnd + min;
+    }
+
+
+    // ---- bootstrapping-code
+    //
+    // so here's the boring part, the three.js initialization
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // create renderer-instance, scene, camera and controls
+    // .... renderer
+    const renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+    });
+    renderer.setSize(width, height);
+    renderer.setClearColor(0x000000);
+    if (renderer.extensions.get('ANGLE_instanced_arrays') === null) {
+        console.error('ANGLE_instanced_arrays not supported');
+    }
+
+
+    // .... scene
+    const scene = new THREE.Scene();
+
+    // .... camera and controls
+    const camera = new THREE.PerspectiveCamera(
+        60, width / height, 0.1, 5000);
+    const controls = new THREE.OrbitControls(camera);
+
+    camera.position.set(-80, 50, 20);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+    // .... run demo-code
+    // initialize simulation
+    const update = init(scene, camera);
+    requestAnimationFrame(function loop(time) {
+        controls.update();
+
+        // update simulation
+        update(performance.now());
+        renderer.render(scene, camera);
+
+        requestAnimationFrame(loop);
+    });
+
+    // .... bind events
+    window.addEventListener('resize', ev => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    });
+
+    document.body.appendChild(renderer.domElement);
+</script>
+</body>
+</html>
