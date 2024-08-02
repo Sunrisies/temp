@@ -1,0 +1,23 @@
+body {
+  min-width: 300px;
+  min-height: 100px;
+}
+ 
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+}
+ 
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ 
+button {
+  display: block;
+  padding: 10px 20px;
+}

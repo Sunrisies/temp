@@ -1,0 +1,28 @@
+{
+  "name": "Change Filter",
+  "version": "1.0",
+  "description": "更改当前浏览器页面的滤镜",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "更改滤镜",
+    "default_popup": "popup.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [  
+    {  
+      "matches": ["https://juejin.cn/*","https://www.rust-lang.org/*"],  
+      "js": ["content.js"]  ,
+      "run_at": "document_start"
+    }  
+  ]
+}
