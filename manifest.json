@@ -4,7 +4,9 @@
   "description": "更改当前浏览器页面的滤镜",
   "manifest_version": 3,
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "storage"
   ],
   "action": {
     "default_title": "更改滤镜",
@@ -18,11 +20,16 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [  
-    {  
-      "matches": ["https://juejin.cn/*","https://www.rust-lang.org/*"],  
-      "js": ["content.js"]  ,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://juejin.cn/*",
+        "https://www.rust-lang.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_start"
-    }  
+    }
   ]
 }

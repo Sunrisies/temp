@@ -1,6 +1,8 @@
 body {
   min-width: 300px;
   min-height: 100px;
+  width:600px;
+  height:500px;
 }
  
 h1 {
